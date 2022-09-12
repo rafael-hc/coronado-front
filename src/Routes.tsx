@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { CartLayout } from './layouts/CartLayout'
+import { CartLayout } from './layouts/LoginLayout'
 import { DefaultLayout } from './layouts/DefaultLayout'
 import { Cart } from './pages/Cart'
 import { Home } from './pages/Home'

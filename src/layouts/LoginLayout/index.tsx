@@ -5,7 +5,6 @@ export const CartLayout = () => {
   return (
     <div>
       <Header />
-      <h1>layout login</h1>
       <Outlet />
     </div>
   )
