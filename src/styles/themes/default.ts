@@ -2,16 +2,16 @@ export const defaultTheme = {
   white: '#fff',
   black: '#000',
 
-  'primary': '#FFA500',
-  'secondary': '#008000',
-  'button': '#D2D2D2',
-  'text': '#fffff0',
+  primary: '#FFA500',
+  secondary: '#008000',
+  button: '#D2D2D2',
+  text: '#fffff0',
   'gray-400': '#8D8D99',
   'gray-500': '#7C7C8A',
   'gray-600': '#323238',
   'gray-700': '#29292E',
   'gray-800': '#1F1E1E',
-  'gray-900': '#121214',
+  footer: '#77a677',
 
   'green-300': '#46FF27',
 
