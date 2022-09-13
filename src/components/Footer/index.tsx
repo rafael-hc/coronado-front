@@ -3,8 +3,10 @@ import { FooterContainer } from './styles'
 export const Footer = () => {
   return (
     <FooterContainer>
-      <p>Footer Mariana</p>
-      <p>oi</p>
+      <div>Sobre a Coronado</div>
+      <div>Dúvidas</div>
+      <div>Serviços</div>
+      <div>Siga a Coronado</div>
     </FooterContainer>
   )
 }
