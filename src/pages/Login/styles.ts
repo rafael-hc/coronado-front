@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const LoginContainer = styled.main`
   max-width: 55rem;
-  margin: 2rem auto 0;
+  margin: 2rem auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;

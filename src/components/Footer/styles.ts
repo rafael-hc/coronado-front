@@ -14,9 +14,6 @@ export const FooterContainer = styled.footer`
   grid-template-rows: 0.5fr 0.5fr;
   gap: 2rem;
 
-  bottom: 0;
-  left: 0;
-  position: absolute;
   width: 100%;
 
   p {
