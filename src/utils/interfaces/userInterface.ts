@@ -11,7 +11,7 @@ interface IAddress {
 interface IUserInfo {
   name?: string
   email: string
-  password: string
+  password?: string
   personType?: 'legal' | 'natural'
   cpf?: string
   cnpj?: string

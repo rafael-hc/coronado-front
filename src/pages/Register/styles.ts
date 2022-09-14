@@ -1,77 +1,83 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const RegisterContainer = styled.main`
-  max-width: 100%;
-  //height: 50rem;
-  margin: 2rem auto 0;
+  max-width: 55rem;
+  height: auto;
+  margin: 2rem auto;
   background-color: ${(props) => props.theme.white};
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3rem 1fr;
   gap: 2rem;
-
-  //border-bottom: solid black 1px;
+  padding: 2rem;
 `
-
-const LoginContent = styled.section`
-  display: flex;
-  flex-direction: column;
-`
-export const SingIn = styled(LoginContent)`
+export const TipoPessoa = styled.div`
   grid-column-start: 1;
   grid-row-start: 2;
+  padding: 1rem;
+  height: 3rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  background-color: ${(props) => props.theme['gray-400']};
+`
+
+export const DadosPessoaisForm = styled.div`
+  grid-column-start: 1;
+  grid-row-start: 3;
   padding: 1rem;
 
   border-radius: 8px;
 
   background-color: ${(props) => props.theme['gray-400']};
-`
-
-export const SingUp = styled(LoginContent)`
-  grid-column-start: 2;
-  grid-row-start: 2;
-
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-`
-
-export const FormSingIn = styled.form`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 0.5rem;
+`
 
-  input {
-    padding: 0.5rem;
-    border: none;
+export const EnderecoForm = styled.div`
+  grid-column-start: 2;
+  grid-row-start: 3;
+  padding: 1rem;
 
-    border-radius: 8px;
-  }
+  border-radius: 8px;
+
+  background-color: ${(props) => props.theme['gray-400']};
+  display: grid;
+  gap: 0.5rem;
+`
+
+export const SenhaForm = styled.div`
+  grid-column-start: 1;
+  grid-row-start: 4;
+  padding: 1rem;
+
+  border-radius: 8px;
+
+  background-color: ${(props) => props.theme['gray-400']};
+  display: grid;
+  gap: 0.5rem;
+`
+
+export const ButtonForm = styled.div`
+  grid-column-start: 2;
+  grid-row-start: 4;
+  padding: 1rem;
 
   button {
     height: 2.5rem;
+    width: 100%;
     border-radius: 8px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
+    cursor: pointer;
+
     background-color: ${(props) => props.theme.secondary};
     color: ${(props) => props.theme.white};
-    cursor: pointer;
   }
-`
-
-export const SingUpButton = styled(Link)`
-  height: 2.5rem;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: ${(props) => props.theme.secondary};
-  color: ${(props) => props.theme.white};
 `

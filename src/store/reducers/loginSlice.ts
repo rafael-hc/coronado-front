@@ -13,6 +13,9 @@ export const authSlice = createSlice({
         loading: false,
         success: true,
         userToken: payload.token,
+        userInfo: {
+          email: payload.email,
+        },
       }
     },
     singOut: (state) => {
@@ -32,7 +35,7 @@ export const authenticateUser =
   (email: string, password: string) => async (dispatch: any) => {
     try {
       const authData = await api.post('/users/login', { email, password })
-      dispatch(singIn(authData.data))
+      dispatch(singIn({ data: authData.data, email }))
     } catch (e: any) {
       console.log('erro: ', e.response.data.message)
       dispatch(error(e))

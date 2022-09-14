@@ -1,18 +1,17 @@
 import { MagnifyingGlass, ShoppingCart, SignIn } from 'phosphor-react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { RootState } from '../../store'
-import { singOut } from '../../store/reducers/loginSlice'
 import { HeaderContainer, LadoDireito, LadoEsquerdo, SearchBar } from './style'
 
 export const Header = () => {
-  const dispatch = useDispatch()
-  const { success } = useSelector((state: RootState) => state.users)
+  // const dispatch = useDispatch()
+  const { users } = useSelector((state: RootState) => state)
 
-  const handleLogout = () => {
-    dispatch(singOut())
-    // navigate('/login/user')
-  }
+  // const handleLogout = () => {
+  //   dispatch(singOut())
+  //   // navigate('/login/user')
+  // }
 
   return (
     <HeaderContainer>
@@ -28,10 +27,10 @@ export const Header = () => {
         </button>
       </SearchBar>
       <LadoDireito>
-        {success ? (
-          <button onClick={handleLogout} style={{ cursor: 'pointer' }}>
-            Logout
-          </button>
+        {users.success ? (
+          <Link to="/user/login">
+            {`Logado como: ${users.userInfo?.email}`}
+          </Link>
         ) : (
           <Link to="/user/login">
             <SignIn size={24} />
