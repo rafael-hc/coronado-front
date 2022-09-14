@@ -73,5 +73,9 @@ export const SearchBar = styled.div`
 
     top: 0;
     right: 0;
+    &:hover {
+      color: ${(props) => props.theme.primary};
+      cursor: pointer;
+    }
   }
 `

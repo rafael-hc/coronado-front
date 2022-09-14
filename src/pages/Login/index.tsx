@@ -80,7 +80,7 @@ export const Login = () => {
           Com a sua conta da você tem acesso a Ofertas exclusivas, descontos,
           acompanhar os seus pedidos e muito mais!
         </p>
-        <SingUpButton to="/register">Criar uma conta</SingUpButton>
+        <SingUpButton to="/user/register">Criar uma conta</SingUpButton>
       </SingUp>
     </LoginContainer>
   )
