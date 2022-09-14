@@ -51,6 +51,9 @@ export const Footer = () => {
           </a>
         </div>
       </RedeSocial>
+      <p>
+        Copyright© 2022 Coronado Comércio de Rações Todos os direitos reservados
+      </p>
     </FooterContainer>
   )
 }

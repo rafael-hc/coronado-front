@@ -13,6 +13,19 @@ export const FooterContainer = styled.footer`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 0.5fr;
   gap: 2rem;
+
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+
+  p {
+    text-align: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
 `
 
 export const SobreNos = styled.div`
@@ -26,6 +39,9 @@ export const SobreNos = styled.div`
 
   a {
     display: flex;
+    &:hover {
+      color: ${(props) => props.theme.secondary};
+    }
   }
 `
 
@@ -40,6 +56,9 @@ export const Contato = styled.div`
 
   a {
     display: flex;
+    &:hover {
+      color: ${(props) => props.theme.secondary};
+    }
   }
 
   .iconesRedeSocial {
@@ -61,6 +80,9 @@ export const TrabalheConosco = styled.div`
 
   a {
     display: flex;
+    &:hover {
+      color: ${(props) => props.theme.secondary};
+    }
   }
 `
 
@@ -75,6 +97,9 @@ export const RedeSocial = styled.div`
 
   a {
     display: flex;
+    &:hover {
+      color: ${(props) => props.theme.secondary};
+    }
   }
 
   .iconesRedeSocial {

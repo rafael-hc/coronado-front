@@ -4,6 +4,7 @@ import { DefaultLayout } from './layouts/DefaultLayout'
 import { Cart } from './pages/Cart'
 import { Home } from './pages/Home'
 import { Login } from './pages/Login'
+import { Register } from './pages/Register'
 
 export const Router = () => {
   return (
@@ -14,6 +15,10 @@ export const Router = () => {
       </Route>
       <Route path="/login" element={<CartLayout />}>
         <Route path="/login/user" element={<Login />} />
+      </Route>
+
+      <Route path="/user" element={<CartLayout />}>
+        <Route path="/user/register" element={<Register />} />
       </Route>
     </Routes>
   )

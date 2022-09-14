@@ -31,8 +31,8 @@ export const Login = () => {
         </FormSingIn>
       </SingIn>
       <SingUp>
-        <h2>Crie sua conta é rápido, fácil e gratuito!</h2>
-        <SingUpButton to="/register">Criar uma conta</SingUpButton>
+        <h2>Crie sua conta. É rápido, fácil e gratuito!</h2>
+        <SingUpButton to="/user/register">Criar uma conta</SingUpButton>
       </SingUp>
     </LoginContainer>
   )

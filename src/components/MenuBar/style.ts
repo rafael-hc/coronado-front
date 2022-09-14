@@ -16,7 +16,7 @@ export const MenuBarContainer = styled.nav`
     color: ${(props) => props.theme.text};
 
     &:hover {
-      color: ${(props) => props.theme.black};
+      color: ${(props) => props.theme.primary};
     }
   }
 `

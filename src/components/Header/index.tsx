@@ -21,9 +21,9 @@ export const Header = () => {
           <SignIn size={24} />
           Entre ou Cadastre-se
         </Link>
-        <a href="#">
+        <Link to="/cart">
           <ShoppingCart size={24} />
-        </a>
+        </Link>
       </LadoDireito>
     </HeaderContainer>
   )

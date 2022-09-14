@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const LoginContainer = styled.main`
-  max-width: 55rem;
+export const RegisterContainer = styled.main`
+  max-width: 100%;
+  //height: 50rem;
   margin: 2rem auto 0;
+  background-color: ${(props) => props.theme.white};
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3rem 1fr;
   gap: 2rem;
+
+  //border-bottom: solid black 1px;
 `
 
 const LoginContent = styled.section`
