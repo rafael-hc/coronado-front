@@ -4,13 +4,21 @@ import { DefaultLayout } from './layouts/DefaultLayout'
 import { Cart } from './pages/Cart'
 import { Home } from './pages/Home'
 import { Login } from './pages/Login'
+import { PrivateRoute } from './utils/PrivateRoutes'
 
 export const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
       </Route>
       <Route path="/login" element={<CartLayout />}>
         <Route path="/login/user" element={<Login />} />

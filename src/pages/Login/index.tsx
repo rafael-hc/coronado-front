@@ -14,6 +14,7 @@ import {
   SingUp,
   SingUpButton,
 } from './styles'
+import { useNavigate } from 'react-router-dom'
 
 const loginSchema = z.object({
   email: z.string().email({ message: 'Digite um e-mail válido' }),
@@ -25,6 +26,7 @@ const loginSchema = z.object({
 type loginFormData = z.infer<typeof loginSchema>
 
 export const Login = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const {
@@ -35,6 +37,7 @@ export const Login = () => {
 
   const handleLogin = ({ email, password }: loginFormData) => {
     dispatch<any>(authenticateUser(email, password))
+    navigate('/')
   }
 
   return (

@@ -6,7 +6,7 @@ export const authSlice = createSlice({
   name: 'users',
   initialState: { loading: true, success: false } as IUser,
   reducers: {
-    success: (state, { payload }: PayloadAction<any>) => {
+    singIn: (state, { payload }: PayloadAction<any>) => {
       console.log(payload)
       return {
         ...state,
@@ -15,17 +15,24 @@ export const authSlice = createSlice({
         userToken: payload.token,
       }
     },
+    singOut: (state) => {
+      return {
+        ...state,
+        loading: false,
+        success: false,
+      }
+    },
     error: (state, { payload }: PayloadAction<string>) => {},
   },
 })
 
-export const { success, error } = authSlice.actions
+export const { singIn, error, singOut } = authSlice.actions
 
 export const authenticateUser =
   (email: string, password: string) => async (dispatch: any) => {
     try {
       const authData = await api.post('/users/login', { email, password })
-      dispatch(success(authData.data))
+      dispatch(singIn(authData.data))
     } catch (e: any) {
       console.log('erro: ', e.response.data.message)
       dispatch(error(e))
