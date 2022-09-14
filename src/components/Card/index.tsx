@@ -1,4 +1,4 @@
-import { Product } from '../../pages/Home'
+import { IProduct } from '../../utils/interfaces/productInterface'
 import {
   CardContainer,
   CardContent,
@@ -7,16 +7,16 @@ import {
 } from './styles'
 
 interface CardProps {
-  product: Product
+  product: IProduct
 }
 
 export const Card = ({ product }: CardProps) => {
-  const { name, price } = product
+  const { name, price, _id } = product
   return (
     <CardContainer>
-      <CardContent href="/Produtos/Produto/">
+      <CardContent to={`/product/${name}/${_id}`}>
         <ImageContainer>
-          <img src="./images/1656093596794_mini.webp" alt="" />
+          <img src={`/images/${_id}.png`} alt="" />
         </ImageContainer>
 
         <CardFooter>

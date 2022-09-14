@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const CardContainer = styled.article`
@@ -10,7 +11,7 @@ export const CardContainer = styled.article`
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.47);
 `
 
-export const CardContent = styled.a`
+export const CardContent = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
