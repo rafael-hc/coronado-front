@@ -12,14 +12,7 @@ export const Router = () => {
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<Home />} />
-        <Route
-          path="cart"
-          element={
-            <PrivateRoute>
-              <Cart />
-            </PrivateRoute>
-          }
-        />
+        <Route path="cart" element={<Cart />} />
       </Route>
       <Route path="user" element={<CartLayout />}>
         <Route path="login" element={<Login />} />

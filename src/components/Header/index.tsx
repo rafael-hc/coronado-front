@@ -33,7 +33,7 @@ export const Header = () => {
             Logout
           </button>
         ) : (
-          <Link to="/login/user">
+          <Link to="/user/login">
             <SignIn size={24} />
             Entre ou Cadastre-se
           </Link>
