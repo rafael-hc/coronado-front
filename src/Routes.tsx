@@ -6,13 +6,21 @@ import { Home } from './pages/Home'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { Product } from './pages/Product'
+import { PrivateRoute } from './utils/PrivateRoutes'
 
 export const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<Home />} />
-        <Route path="cart" element={<Cart />} />
+        <Route
+          path="cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
         <Route path="product/:name/:id" element={<Product />} />
       </Route>
       <Route path="/user" element={<CartLayout />}>
