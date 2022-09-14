@@ -8,6 +8,8 @@ export const defaultTheme = {
   text: '#fffff0',
   footer: '#77a677',
 
+  danger: '#ff3100',
+
   'gray-400': '#e2e2e7',
   'gray-500': '#7C7C8A',
   'gray-600': '#323238',

@@ -30,21 +30,14 @@ export const SingUp = styled(LoginContent)`
   grid-row-start: 2;
 
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 `
 
 export const FormSingIn = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 
-  input {
-    padding: 0.5rem;
-    border: none;
-
-    border-radius: 8px;
-  }
+  margin-top: 1rem;
 
   button {
     height: 2.5rem;
@@ -54,8 +47,27 @@ export const FormSingIn = styled.form`
     align-items: center;
     justify-content: center;
 
+    cursor: pointer;
+
     background-color: ${(props) => props.theme.secondary};
     color: ${(props) => props.theme.white};
+  }
+`
+
+export const FieldContainer = styled.fieldset`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  border: none;
+  position: relative;
+
+  input {
+    padding: 0.5rem;
+    border: none;
+    margin: 0.25rem 0 1.5rem;
+
+    border-radius: 8px;
   }
 `
 
@@ -69,4 +81,14 @@ export const SingUpButton = styled(Link)`
 
   background-color: ${(props) => props.theme.secondary};
   color: ${(props) => props.theme.white};
+`
+
+export const InputError = styled.span`
+  display: block;
+  position: absolute;
+  bottom: 0rem;
+  right: 0;
+  font-size: 0.825rem;
+
+  color: ${(props) => props.theme.danger};
 `

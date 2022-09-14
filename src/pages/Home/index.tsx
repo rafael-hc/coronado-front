@@ -3,31 +3,12 @@ import { addProducts, fetchProd } from '../../store/reducers/productSlice'
 import { useEffect } from 'react'
 import { MostVendor } from './MostVendor'
 
-interface Details {
-  title: string
-  body: string
-}
-
-export interface Product {
-  _id?: string
-  name: string
-  category: string
-  price: number
-  inventory: number
-  details: Details[]
-  createdAt?: Date
-}
-
 export const Home = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch<any>(fetchProd())
   }, [dispatch])
-
-  //   const handleFetchProducts = () => {
-  //     dispatch(fetchProducts('Mudou nome da ração'))
-  //   }
 
   const handleAddProduct = () => {
     const product = {
