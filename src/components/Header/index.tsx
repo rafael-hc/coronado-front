@@ -11,7 +11,6 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(singOut())
-    // navigate('/login/user')
   }
 
   return (
@@ -29,12 +28,10 @@ export const Header = () => {
       </SearchBar>
       <LadoDireito>
         {users.success ? (
-          <Link to="/user/login">
+          <button onClick={handleLogout} style={{ cursor: 'pointer' }}>
             {`Logado como: ${users.userInfo?.email}`}
-            <button onClick={handleLogout} style={{ cursor: 'pointer' }}>
-              <SignOut size={24} />
-            </button>
-          </Link>
+            <SignOut size={24} />
+          </button>
         ) : (
           <Link to="/user/login">
             <SignIn size={24} />

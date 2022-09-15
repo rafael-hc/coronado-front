@@ -1,13 +1,13 @@
-import { useDispatch } from 'react-redux'
 import { addProducts, fetchProd } from '../../store/reducers/productSlice'
 import { useEffect } from 'react'
 import { MostVendor } from './MostVendor'
+import { useAppDispatch } from '../../store/hooks'
 
 export const Home = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch<any>(fetchProd())
+    dispatch(fetchProd())
   }, [dispatch])
 
   const handleAddProduct = () => {

@@ -1,4 +1,3 @@
-import { useDispatch } from 'react-redux'
 import { authenticateUser } from '../../store/reducers/loginSlice'
 
 import { useForm } from 'react-hook-form'
@@ -15,6 +14,7 @@ import {
   SingUpButton,
 } from './styles'
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '../../store/hooks'
 
 const loginSchema = z.object({
   email: z.string().email({ message: 'Digite um e-mail válido' }),
@@ -27,7 +27,7 @@ type loginFormData = z.infer<typeof loginSchema>
 
 export const Login = () => {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const {
     register,
@@ -36,7 +36,7 @@ export const Login = () => {
   } = useForm<loginFormData>({ resolver: zodResolver(loginSchema) })
 
   const handleLogin = ({ email, password }: loginFormData) => {
-    dispatch<any>(authenticateUser(email, password))
+    dispatch(authenticateUser({ email, password }))
     navigate('/')
   }
 

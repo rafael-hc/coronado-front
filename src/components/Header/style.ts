@@ -30,7 +30,8 @@ export const LadoDireito = styled.div`
   align-items: center;
   gap: 16px;
 
-  a {
+  a,
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
