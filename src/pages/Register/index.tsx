@@ -12,21 +12,10 @@ export const Register = () => {
     <RegisterContainer>
       <h1>Crie a sua conta</h1>
       <TipoPessoa>
-        <input
-          type="radio"
-          name="pessoa-fisica"
-          id="pessoa-fisica"
-          checked
-          value="s1"
-        />
-        <label htmlFor="s1">Pessoa Física</label>
-        <input
-          type="radio"
-          name="pessoa-fisica"
-          id="pessoa-fisica"
-          value="s2"
-        />
-        <label htmlFor="s2">Pessoa Jurídica</label>
+        <input type="radio" name="pf" id="pf" checked value="pf" />
+        <label htmlFor="pf">Pessoa Física</label>
+        <input type="radio" name="pj" id="pj" value="pj" />
+        <label htmlFor="pj">Pessoa Jurídica</label>
       </TipoPessoa>
 
       <DadosPessoaisForm>
